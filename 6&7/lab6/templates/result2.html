@@ -1,0 +1,17 @@
+$def with (t,answer)
+<a href="/text_home">文档搜索点这里</a>
+<form action="/image_search" method="GET">
+    $:t.render()
+</form>
+$if answer[0]:
+    Searching for: <em>$answer[0]</em></br></br>
+    $for element in answer[1]:
+        <a href=$element['url']>$element['titles']</a></br>
+        <em>$element['url']</em></br>
+        <img src=$element['picture'][0] style="max-width:500px;"> </br>
+        $element['relative_content']</br>
+        </br>
+
+$else:
+    Sorry, you have entered nothing.
+    Please try again.

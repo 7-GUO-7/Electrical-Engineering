@@ -1,0 +1,51 @@
+$def with (t,answer)
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<link rel="stylesheet" href="/static/css/index.css">
+<style>
+	body{background-color: #1D1D1D}
+	#foot_bm a,p,p a{font-size:12px;color:#666;}
+#foot_bm a,#foot_bm,p,p a{color:#666;}
+.top_left{line-height:150%;color:#fff;}
+</style>
+
+</head>
+<body>
+
+<div class="carousel content-main">
+<ul class="list">
+	<li><img src="/static/img/photo_1.jpg"></li>
+	<li><img src="/static/img/photo_2.jpg"></li>
+	<li><img src="/static/img/photo_3.jpg"></li>
+	<li><img src="/static/img/photo_4.jpg"></li>
+	<li><img src="/static/img/photo_5.jpg"></li>
+	<li><img src="/static/img/photo_3.jpg"></li>
+	<li><img src="/static/img/photo_4.jpg"></li>
+	<li><img src="/static/img/photo_5.jpg"></li>
+	<li><img src="/static/img/photo_3.jpg"></li>
+	<li><img src="/static/img/photo_4.jpg"></li>
+	<li><img src="/static/img/photo_5.jpg"></li>
+</ul>
+</div>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+<script type="text/javascript">
+var setting = {
+	width:1000,
+	height:270,
+	postWidth:658,
+	postHeight:270,
+	scale:0.8,
+	speed:500,
+	verticalAlign:"center"
+}
+$(".carousel").attr("data-setting",'{ "width":900,"height":411,"postWidth":658}')
+Carousel.init($(".carousel"))
+</script>
+
+    <br><br>
+
+
+</body>
+</html>

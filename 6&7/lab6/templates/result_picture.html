@@ -1,0 +1,63 @@
+$def with (t,answer)
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blur Menu with CSS3 Transitions" />
+    <meta name="keywords" content="css3, transitions, menu, blur, navigation, typography, font, letters, text-shadow" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/static/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style2.css" />
+    </head>
+    <body style="background-image: url(/static/img/pattern.png), url(/static/img/2.jpg);">
+        <div class="container">
+            <div class="header">
+                <a href="/text_home">
+                    文档搜索入口 ➪
+                </a>
+                <div class="clr"></div>
+            </div>
+            <h1> <span></span></h1>
+            <div class="content">
+                <ul class="bmenu">
+                    <style type="text/css">
+                        .bmenu li{
+                            font-size: 19px;
+                            display: block;
+                        }
+                        </style>
+                    $for element in answer[1]:
+                        <li><a href=$element['url']>$element['titles']</br>
+                        <img src=$element['picture'][0] style="max-height:150px;align:center">
+                        <!--<img src=$element['picture'][0] style="max-weight:150px;align:center">-->
+                            $if len(element['picture'])>1:
+                                <img src=$element['picture'][1] style="max-height:150px;align:center">
+                            $if len(element['picture'])>2:
+                                <img src=$element['picture'][2] style="max-height:150px;align:center">
+                        </a></li>
+                    <!--<li><a href="http://ow.blizzard.cn/heroes/">About</a></li>-->
+                    <!--<li><a href="http://ow.blizzard.cn/heroes/">Illustrations</a></li>-->
+                    <!--<li><a href="http://ow.blizzard.cn/heroes/">Photography</a></li>-->
+                    <!--<li><a href="http://ow.blizzard.cn/heroes/">Web Design</a></li>-->
+                    <!--<li><a href="http://ow.blizzard.cn/heroes/">Personal Projects</a></li>-->
+                    <!--<li><a href="http://ow.blizzard.cn/heroes/">Contact</a></li>-->
+                </ul>
+                <!--<div class="more">-->
+                    <!--<ul>-->
+                        <!--<li> More! </li>-->
+                        <!--<li><a href="index.html">Author 1</a></li>-->
+                        <!--<li><a href="index2.html">Author 2</a></li>-->
+                        <!--<li><a href="index3.html">Author 3</a></li>-->
+                        <!--<li><a href="index3.html">Author 3</a></li>-->
+                        <!--&lt;!&ndash;<li class="selected"><a href="index4.html">Me</a></li>&ndash;&gt;-->
+						<!--<li><a href="index5.html">Author 5</a></li>-->
+						<!--<li><a href="index6.html">Author 6</a></li>-->
+						<!--<li><a href="index7.html">Author 7</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            </div>
+        </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+</body>
